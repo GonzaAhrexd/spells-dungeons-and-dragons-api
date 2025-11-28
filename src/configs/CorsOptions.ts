@@ -1,10 +1,7 @@
 
 const origin = process.env.corsOrigin;
-
-console.log(origin)
-
 const allowedOrigins = [
-  origin, // Origin from environment variable
+  origin, 
 ];
 
 

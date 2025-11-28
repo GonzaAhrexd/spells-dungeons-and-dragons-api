@@ -27,6 +27,9 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 // Define routes
 app.use('/api/spells', pingRoutes)
+app.use('/api/ping', (req, res) => {
+    res.status(200).send('pong');
+});
 
 // Start the server
 const port = process.env.PORT || 3000; // Server port from environment variables or default to 3000
