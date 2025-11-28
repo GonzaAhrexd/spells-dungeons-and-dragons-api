@@ -1,6 +1,8 @@
+
+const origin = process.env.corsOrigin;
+
 const allowedOrigins = [
-  process.env.corsOrigin, // Origin from environment variable
-  'http://localhost:4200', // Additional origin
+  origin, // Origin from environment variable
 ];
 
 
