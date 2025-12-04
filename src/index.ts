@@ -10,7 +10,7 @@ import corsOptions from './configs/CorsOptions';
 
 // Routes
 import pingRoutes from './routes/spells.routes' // Ping routes
-
+import passRoutes from './routes/pass.routes' // Password routes
 dotenv.config(); // Load environment variables from .env file
 
 // Start Express application
@@ -30,6 +30,7 @@ app.use('/api/spells', pingRoutes)
 app.use('/api/ping', (req, res) => {
     res.status(200).send('pong');
 });
+app.use('/api/pass', passRoutes);
 
 // Start the server
 const port = process.env.PORT || 3000; // Server port from environment variables or default to 3000
