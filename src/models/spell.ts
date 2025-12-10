@@ -4,16 +4,14 @@ const spellSchema = new mongoose.Schema({
     nombre: {
         type: String,
         required: true,
-        unique: true
     },
     descripcion: {
         type: String,
         requierd: true,
-        unique: true
     },
     potencia: {
         type: Number,
-        required: true
+        required: false
     },
     nivel: {
         type: String,
@@ -22,6 +20,10 @@ const spellSchema = new mongoose.Schema({
     tipo: {
         type: String,
         required: true
+    },
+    tipoRuna: {
+        type: String,
+        required: false
     },
     usuariosConHechizo: {
         type: [String],

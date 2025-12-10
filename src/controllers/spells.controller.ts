@@ -18,8 +18,12 @@ export const createSpell = async (req,res) => {
             return res.status(401).json({message: "Unauthorized"})
         }
 
+        console.log(req.body)
+
         const newSpell = new spell(req.body)
         const savedSpell = await newSpell.save()
+
+        
         res.json(savedSpell)
     }catch(error){
         console.log(error)
